@@ -177,17 +177,17 @@ angular.module('ethExplorer')
       }
 
         function getETHRates() {
-          $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function(json) {
+          $.getJSON("https://api.coinmarketcap.com/v1/ticker/ellaism/", function(json) {
             var price = Number(json[0].price_usd);
             $scope.ethprice = "$" + price.toFixed(2);
           });
 
-          $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function(json) {
+          $.getJSON("https://api.coinmarketcap.com/v1/ticker/ellaism/", function(json) {
             var btcprice = Number(json[0].price_btc);
             $scope.ethbtcprice = btcprice;
           });
 
-          $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function(json) {
+          $.getJSON("https://api.coinmarketcap.com/v1/ticker/ellaism/", function(json) {
             var cap = Number(json[0].market_cap_usd);
             //console.log("Current ETH Market Cap: " + cap);
             $scope.ethmarketcap = cap;
